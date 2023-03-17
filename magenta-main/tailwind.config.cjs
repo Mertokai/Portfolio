@@ -2,12 +2,12 @@
 module.exports = {
 	content: [
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
-		'./node_modules/flowbite/**/*.js'
 	],
 	theme: {
 		extend: {
 			maxWidth: {
 			'3/4': '75%',
+			'1/2': '50%',
 		  }
 		 
 		},
@@ -15,10 +15,9 @@ module.exports = {
 			'3/4': '75%',
 			'1/2': '50%',
 			"1/4" : '25%',
+		  },
+		  height: {
+			'128': '32rem',
 		  }
 	},
-	plugins: [
-		require('flowbite/plugin')
-		
-	],
 }

@@ -1,36 +1,37 @@
 ---
-import logo from "../images/logo.jpg"
 ---
 
-<header class="min-h-[25%]">
-
-<nav class="m-10 bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-	<div class="container flex flex-wrap items-center justify-between mx-auto">
-	  <a  href="/" class="flex items-center">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
-		  </svg> 
-		  <span>Home</span>
-		</a>
-	  <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-		<span class="sr-only">Open main menu</span>
-		<svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-	  </button>
-	  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-		<ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-			<a href="/about" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-		  
-		  <li>
-			<a href="https://github.com/mertokai" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">GitHub</a>
-		  </li>
-		  <li>
-			<a href="https://www.instagram.com/merteyuboglu.16" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Instagram</a>
-		  </li>
-		  <li>
-			<a href="https://twitter.com/Mertokai" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Twitter</a>
-		  </li>
+<header>
+	<nav class="flex list-none justify-between md:px-20 max-md:px-10 py-6 max-md:flex-col max-md:space-y-6 ">
+	  <div class="flex justify-between">
+		<a class="hover:text-cyan-500 text-xl ;" href="/">Home</a>
+		<div class="md:hidden">
+		  <button id="btn">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+			  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+			</svg>
+		  </button>
+		</div>
+	  </div>
+	  <div class="max-sm:flex-row max-md:hidden max-md:text-center">
+		<ul class="flex list-none justify-between md:space-x-6 max-md:space-x-2">
+		  <li> <a class="hover:text-cyan-500" href="/about">About</a></li>
+		  <li> <a class="hover:text-cyan-500" href="https://www.github.com/Mertokai">Github</a></li>
+		  <li> <a class="hover:text-cyan-500" href="https://www.twitter.com/Mertokai">Twitter</a></li>
+		  <li> <a class="hover:text-cyan-500" href="https://www.instagram.com/merteyuboglu.16">Instagram</a></li>
 		</ul>
 	  </div>
-	</div>
-  </nav>
-</header>
+	</nav>
+  </header>
+  
+  
+  <script>
+	const btn = document.getElementById("btn");
+const navLinks = document.getElementsByClassName("max-sm:flex-row  max-md:text-center")[0];
+
+btn.addEventListener("click", () => {
+  navLinks.classList.toggle("max-md:hidden");
+});
+
+  </script>
+  

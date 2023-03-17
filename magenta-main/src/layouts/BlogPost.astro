@@ -2,19 +2,16 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-import "flowbite";
 ---
 
 <html lang="en">
 	<head>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
 	</head>
 
 	<body class="flex flex-col min-h-screen ">
 		
-		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
 	
-	<div class="h-screen ">
+	<div class="h-screen">
 		<Header />
 		<slot />
 		<Footer />
